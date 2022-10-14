@@ -20,9 +20,11 @@
  */
 
 export const removeFalseValues = (booleanArr) => {
-  return;
+  const trueValues = booleanArr.filter((boolean) => {
+    return boolean;
+  });
+  return trueValues;
 };
-
 /**
  * A function that takes an array of numbers that are between 0 and 1.
  * The function needs to create a new array with the numbers converted into a percentage
@@ -32,7 +34,10 @@ export const removeFalseValues = (booleanArr) => {
  */
 
 export const createPercentageList = (numbersArr) => {
-  return;
+  const convertToPercentage = numbersArr.map((number) => {
+    return number * 100 + "%";
+  });
+  return convertToPercentage;
 };
 
 /**
@@ -45,7 +50,10 @@ export const createPercentageList = (numbersArr) => {
  */
 
 export const createListOfPossessions = (possessionsArr, name) => {
-  return;
+  const combinedNames = possessionsArr.map((combined) => {
+    return name + " " + combined;
+  });
+  return combinedNames;
 };
 
 /* Intermediate Challenges */
@@ -68,7 +76,8 @@ export const createListOfPossessions = (possessionsArr, name) => {
  */
 
 export const convertStringToNumbersArray = (numberString) => {
-  return;
+  const newString = numberString.split("+");
+  return newString;
 };
 
 /**
@@ -80,7 +89,11 @@ export const convertStringToNumbersArray = (numberString) => {
  */
 
 export const createOddEvenArray = (numberString) => {
-  return;
+  const numberArray = convertStringToNumbersArray(numberString);
+  const oddEvenArray = numberArray.map((number) =>
+    number % 2 === 0 ? "even" : "odd"
+  );
+  return oddEvenArray;
 };
 
 /**
@@ -93,7 +106,8 @@ export const createOddEvenArray = (numberString) => {
  */
 
 export const filterBooksBySearch = (booksArr, searchTerm) => {
-  return;
+  const searchResult = booksArr.filter((book) => book.includes(searchTerm));
+  return searchResult;
 };
 
 /* Advanced Challenges */
@@ -135,7 +149,15 @@ export const formatStringArray = (stringArr) => {
  */
 
 export const formatString = (string) => {
-  return;
+  splitted = str
+    .toString()
+    .toUpperCase()
+    .replace(/[^a-z]/gi, "")
+    .split("");
+  const formatString = splitted.map((letter, index) =>
+    index % 2 == 0 ? letter.toUpperCase() : letter.toLowerCase()
+  );
+  return formatString;
 };
 
 /**

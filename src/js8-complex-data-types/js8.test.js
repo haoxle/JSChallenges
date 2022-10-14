@@ -61,7 +61,7 @@ describe("getEmployeeQuotes() tests", () => {
   });
 });
 
-xdescribe("getTheManagers() tests", () => {
+describe("getTheManagers() tests", () => {
   it("Should return an array containing only employees where isManagement is true", () => {
     expect(getTheManagers(mockEmployeeData)).toStrictEqual([
       {
@@ -82,7 +82,7 @@ xdescribe("getTheManagers() tests", () => {
   });
 });
 
-xdescribe("getNumberOfKeys() tests", () => {
+describe("getNumberOfKeys() tests", () => {
   const object1 = { a: 1, b: 2 };
   const object2 = { a: 1, b: 2, c: 3, d: 4 };
   const object3 = { a: 1, b: 2, c: 3, d: 4, e: 5, f: 6 };
@@ -169,7 +169,7 @@ const mockShoppingBasketWithTotals = [
   },
 ];
 
-xdescribe("findMostExpensiveItem() tests", () => {
+describe("findMostExpensiveItem() tests", () => {
   it("Should return a single object", () => {
     expect(findMostExpensiveItem(mockShoppingBasket)).toHaveProperty("name");
     expect(findMostExpensiveItem(mockShoppingBasket).name).toBe("hoodie");
@@ -185,7 +185,7 @@ xdescribe("findMostExpensiveItem() tests", () => {
   });
 });
 
-xdescribe("setTotalPrice() tests", () => {
+describe("setTotalPrice() tests", () => {
   it("Should return an array", () => {
     expect(Array.isArray(setTotalPrice(mockShoppingBasket))).toBe(true);
   });
@@ -211,7 +211,7 @@ xdescribe("setTotalPrice() tests", () => {
   });
 });
 
-xdescribe("totalShoppingBasket() tests", () => {
+describe("totalShoppingBasket() tests", () => {
   it("Should return a number", () => {
     expect(typeof totalShoppingBasket(mockShoppingBasketWithTotals)).toBe(
       "number"
@@ -223,7 +223,7 @@ xdescribe("totalShoppingBasket() tests", () => {
   });
 });
 
-xdescribe("getImportantKeys() tests", () => {
+describe("getImportantKeys() tests", () => {
   const mealsArr = [
     {
       id: 10,
@@ -288,7 +288,7 @@ xdescribe("getImportantKeys() tests", () => {
   });
 });
 
-xdescribe("setImportantKeys() tests", () => {
+describe("setImportantKeys() tests", () => {
   const mealsArr = [
     {
       id: 10,
@@ -360,7 +360,7 @@ xdescribe("setImportantKeys() tests", () => {
   });
 });
 
-xdescribe("cleanCocktailResponseData() tests", () => {
+describe("cleanCocktailResponseData() tests", () => {
   const mockCocktailData = [
     {
       idDrink: 12768,

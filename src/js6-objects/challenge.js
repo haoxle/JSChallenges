@@ -21,7 +21,7 @@
  * @return {number} The price of the piece of furniture
  */
 export const getFurniturePrice = (furniture) => {
-  return;
+  return furniture.price;
 };
 
 /**
@@ -32,8 +32,11 @@ export const getFurniturePrice = (furniture) => {
  * @returns {{name: string, price: number, location: string}} furniture - A furniture object from the catalogue
  */
 export const setFurnitureStoreLocation = (furniture, location) => {
-  return;
+  return { ...furniture, location };
 };
+//   furniture.location = location;
+//   return furniture;
+// };
 
 /**
  * A function which takes a selection of arguments relating to a space ship and uses them
@@ -51,7 +54,13 @@ export const makeSpaceship = (
   engineType,
   canTravelSolarSystems
 ) => {
-  return;
+  const spaceShip = {
+    name,
+    noOfSeats,
+    engineType,
+    canTravelSolarSystems,
+  };
+  return spaceShip;
 };
 
 /* Intermediate Challenges */
@@ -64,7 +73,13 @@ export const makeSpaceship = (
  * @returns {{name: string, username: string}} User - The user object with the same username or a new one
  */
 export const setUserName = (user, username) => {
-  return;
+  if (user.username) {
+    return user;
+  } else {
+    user.username = username;
+    return user;
+    // return { ...user, username };
+  }
 };
 
 /**
@@ -113,7 +128,18 @@ export const getUserAddress = (user) => {
  * @return {{id: number, name: string, allergies: string[], safeAllergens: string[]}} customer
  */
 export const setSafeAllergens = (customer, allergenList) => {
-  return;
+  // const safeAllergens = allergenList.filter((allergen) => {
+  //   return !customer.allergies.includes(allergen);
+  // });
+
+  const safeAllergens = [];
+  for (let index = 0; index < allergenList.length; index++) {
+    if (!customer.allergies.includes(allergenList[index])) {
+      safeAllergens.push(allergenList[index]);
+    }
+  }
+  customer.safeAllergens = safeAllergens;
+  return customer;
 };
 
 /* Expert Challenges */

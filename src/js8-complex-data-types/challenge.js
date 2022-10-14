@@ -17,9 +17,12 @@
  * @returns {string[]} A list of the employees quotes for the website
  */
 export const getEmployeeQuotes = (employeeArr) => {
-  return;
-};
+  const employeeQuotes = employeeArr.map((employee) => {
+    return employee.quote;
+  });
 
+  return employeeQuotes;
+};
 /**
  * A function which takes an array of employee objects and returns a new array only containing employees that are managers.
  *
@@ -27,7 +30,11 @@ export const getEmployeeQuotes = (employeeArr) => {
  * @returns {{name: string, quote: string, yearsEmployed: number, isManagement: boolean}[]} An array containing only managers
  */
 export const getTheManagers = (employeeArr) => {
-  return;
+  const managerArr = employeeArr.filter((employee) => {
+    return employee.isManagement;
+  });
+
+  return managerArr;
 };
 
 /**

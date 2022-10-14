@@ -16,10 +16,8 @@
  * @param {string} lastName Smith
  * @returns {string} John Smith
  */
-export const createFullName = (firstName, lastName) => {
-  return;
-};
-
+export const createFullName = (firstName, lastName) =>
+  firstName + " " + lastName;
 /**
  * A function that takes two numbers as an input and returns the smallest one.
  * !!NOTE!! You'll have to write in the parameters for this function yourself.
@@ -28,9 +26,8 @@ export const createFullName = (firstName, lastName) => {
  * @param {number} number2 200
  * @returns {number} 100
  */
-export const findSmallestNumber = (/* Write the parameters here */) => {
-  return;
-};
+export const findSmallestNumber = (number1, number2) =>
+  Math.min(number1, number2);
 
 /**
  * A function that takes two numbers as input, multiplies them together and returns the product.
@@ -40,9 +37,7 @@ export const findSmallestNumber = (/* Write the parameters here */) => {
  * @param {number} number2 6
  * @returns {number} 18
  */
-export const multiplyNumbers = (/* Write the parameters here */) => {
-  return;
-};
+export const multiplyNumbers = (number1, number2) => number1 * number2;
 
 /* Intermediate Challenges */
 
@@ -57,7 +52,13 @@ export const multiplyNumbers = (/* Write the parameters here */) => {
  * @returns {string} "You got a new high score!" | "So close!" | "Better luck next time!"
  */
 export const checkIfNewHighScore = (score, highScore) => {
-  return;
+  if (score < highScore) {
+    return "Better luck next time!";
+  } else if (score == highScore) {
+    return "So close!";
+  } else {
+    return "You got a new high score!";
+  }
 };
 
 /**
@@ -66,9 +67,11 @@ export const checkIfNewHighScore = (score, highScore) => {
  * @param {number} tempInCelsius 15
  * @returns {string} "15 degrees celsius is 59 degrees fahrenheit"
  */
-export const celsiusToFahrenheit = (tempInCelsius) => {
-  return;
-};
+export const celsiusToFahrenheit = (tempInCelsius) =>
+  tempInCelsius +
+  " degrees celsius is " +
+  (tempInCelsius * 1.8 + 32) +
+  " degrees fahrenheit";
 
 /**
  * A function that calculates the number of snickers needed for the rest of your life based on the number you eat per day,
@@ -79,9 +82,8 @@ export const celsiusToFahrenheit = (tempInCelsius) => {
  * @param {number} maxAge 90
  * @returns {number} 47450
  */
-export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
-  return;
-};
+export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) =>
+  snickersPerDay * 365 * (maxAge - age);
 
 /* Advanced Challenges */
 
@@ -100,7 +102,22 @@ export const calculateLifetimeSupply = (snickersPerDay, age, maxAge) => {
  * @returns {string} A - F | Score unavailable
  */
 export const getGrade = (score) => {
-  return;
+  if (score < 0 || score > 100 || typeof score !== "number") {
+    return "Score unavailable";
+  }
+  if (score >= 80) {
+    return "A";
+  } else if (score >= 70) {
+    return "B";
+  } else if (score >= 60) {
+    return "C";
+  } else if (score >= 50) {
+    return "D";
+  } else if (score >= 40) {
+    return "E";
+  } else {
+    return "F";
+  }
 };
 
 /**
@@ -109,9 +126,8 @@ export const getGrade = (score) => {
  * @param {number} radius 3
  * @returns {number} 28.27
  */
-export const calculateAreaOfCircle = (radius) => {
-  return;
-};
+export const calculateAreaOfCircle = (radius) =>
+  parseFloat((Math.PI * radius ** 2).toFixed(2));
 
 /* Expert Challenges */
 

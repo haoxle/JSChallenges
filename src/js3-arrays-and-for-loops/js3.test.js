@@ -40,7 +40,7 @@ describe("Testing createRecipeString()", () => {
   });
 });
 
-xdescribe("Testing getFirstAndLastItems()", () => {
+describe("Testing getFirstAndLastItems()", () => {
   it("Should be defined", () => {
     expect(getFirstAndLastItems(coaches)).toBeDefined();
   });
@@ -55,7 +55,7 @@ xdescribe("Testing getFirstAndLastItems()", () => {
   });
 });
 
-xdescribe("Testing totalScores()", () => {
+describe("Testing totalScores()", () => {
   it("Should be defined", () => {
     expect(totalScores(scores)).toBeDefined();
   });
@@ -78,7 +78,7 @@ xdescribe("Testing totalScores()", () => {
   });
 });
 
-xdescribe("Testing totalRange()", () => {
+describe("Testing totalRange()", () => {
   it("Should be defined", () => {
     expect(totalRange(10)).toBeDefined();
   });
@@ -99,7 +99,7 @@ xdescribe("Testing totalRange()", () => {
   });
 });
 
-xdescribe("Testing moveFirstAndLastItems()", () => {
+describe("Testing moveFirstAndLastItems()", () => {
   it("Should be defined", () => {
     expect(moveFirstAndLastItems(items)).toBeDefined();
   });
@@ -118,7 +118,7 @@ xdescribe("Testing moveFirstAndLastItems()", () => {
   });
 });
 
-xdescribe("Testing removeEvenNumbers()", () => {
+describe("Testing removeEvenNumbers()", () => {
   it("Should be defined", () => {
     expect(removeEvenNumbers(scores)).toBeDefined();
   });
@@ -150,7 +150,7 @@ xdescribe("Testing removeEvenNumbers()", () => {
   });
 });
 
-xdescribe("Testing generateAverage()", () => {
+describe("Testing generateAverage()", () => {
   it("Should be defined", () => {
     expect(generateAverage([10])).toBeDefined();
   });
@@ -176,7 +176,7 @@ xdescribe("Testing generateAverage()", () => {
   });
 });
 
-xdescribe("Testing reverseOrder()", () => {
+describe("Testing reverseOrder()", () => {
   it("Should be defined", () => {
     expect(reverseOrder(items)).toBeDefined();
   });
@@ -204,7 +204,7 @@ xdescribe("Testing reverseOrder()", () => {
   });
 });
 
-xdescribe("Testing generateHighscores()", () => {
+describe("Testing generateHighscores()", () => {
   let players, playerScores, highscores;
   beforeEach(() => {
     players = ["Andy", "Bex", "Calum"];
@@ -258,7 +258,7 @@ xdescribe("Testing generateHighscores()", () => {
   });
 });
 
-xdescribe("Testing encryptString()", () => {
+describe("Testing encryptString()", () => {
   it("Should NOT return undefined", () => {
     expect(encryptString("  defined")).toBeDefined();
   });

@@ -20,7 +20,9 @@
  */
 
 export const totalScoresArr = (scoresArr) => {
-  return;
+  return scoresArr.reduce(
+    (previousValue, currentValue) => previousValue + currentValue
+  );
 };
 
 /**
