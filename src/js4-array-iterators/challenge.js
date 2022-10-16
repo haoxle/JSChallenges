@@ -183,6 +183,17 @@ export const formatString = (string) => {
  * @return {string[]} [ "Fizz", "Buzz", "FizzBuzz", "2" ]
  */
 
-export const fizzBuzz = (mixedArray) => {
-  return;
+export const fizzBuzz = (numbers) => {
+  let positive_array = numbers.filter(value => value > 0);
+  console.log(positive_array)
+return positive_array.map((num) => {
+  if ((parseFloat(num) % 3 === 0) && (parseFloat(num) % 5 ===0)) {
+    return "FizzBuzz"
+  } else if (parseFloat(num) % 3 === 0) {
+    return "Fizz"
+  }else if (parseFloat(num) % 5 === 0) {
+    return "Buzz"
+  } else {return num.toString()
+         }
+})
 };

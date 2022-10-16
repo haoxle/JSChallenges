@@ -34,9 +34,7 @@ export const totalScoresArr = (scoresArr) => {
  * @return {string} "esrever"
  */
 
-export const reverseString = (toReverse) => {
-  return;
-};
+export const reverseString = (toReverse) => toReverse.split("").reverse().join("")
 
 /**
  * A function that arranges an array of characters alphabetically.
@@ -47,9 +45,7 @@ export const reverseString = (toReverse) => {
  * @return {string[]} ["b", "b", "b", "g", "l", "n", "x", "x"]
  */
 
-export const sortCharactersAlphabetically = (characterArr) => {
-  return;
-};
+export const sortCharactersAlphabetically = (characterArr) => characterArr.sort().join("").toLowerCase().split("")
 
 /* Intermediate Challenges */
 
@@ -63,7 +59,8 @@ export const sortCharactersAlphabetically = (characterArr) => {
  */
 
 export const sortNumbersHighToLow = (numberArr) => {
-  return;
+  const newArr = numberArr.sort().reverse()
+  return newArr
 };
 
 /**
@@ -84,6 +81,11 @@ export const checkItemInStock = (toCheck) => {
   return;
 };
 
+findStock = (stockList, item) => {
+  if (stockList.includes(item)) {
+   return `${item} is on aisle ${stockList.indexOf(item)}`}
+ }
+
 /**
  * A function that takes an array of colours and checks if EVERY colour is a primary colour.
  * The primary colours are ["red", "blue", "yellow"].
@@ -94,9 +96,7 @@ export const checkItemInStock = (toCheck) => {
  * @return {boolean} false
  */
 
-export const checkPrimaryColours = (coloursArr) => {
-  return;
-};
+export const checkPrimaryColours = (coloursArr) => coloursArr.every((color) => (color == "red") || (color == "blue")||(color == "green") ? true : false);
 
 /* Advanced Challenges */
 
@@ -109,9 +109,9 @@ export const checkPrimaryColours = (coloursArr) => {
  * @return {boolean} true
  */
 
-export const checkStringPalindrome = (stringOne) => {
-  return;
-};
+export const checkStringPalindrome = (stringOne) => stringOne.split("").reverse().join("") === stringOne ? true : false;
+
+
 
 /**
  * A function that totals a nested array of scores arrays.
@@ -123,9 +123,10 @@ export const checkStringPalindrome = (stringOne) => {
  * @return {number[]} [20, 7, 3]
  */
 
-export const totalNestedScoresArr = (scoresArr) => {
-  return;
-};
+export const totalNestedScoresArr = (scoresArr) => totalNestedScoresArr = (scoresArr) => scoresArr.map((arr) => arr.reduce(
+  (previousValue, currentValue) => previousValue + currentValue,
+  0)
+);
 
 /* Expert Challenges */
 
